@@ -117,12 +117,16 @@ def classify(tweet_id, userid):
   return ("source", text)
 
 def has_US_location(tweet):
+  # change it to consider only user_location
   return str(tweet).find("\'us\', \'state\'") != -1
 
 def main():
   all_files = ['en_geo_2020-04-03-029.json', 'en_geo_2020-02-20.json', 'en_geo_2020-03-31-027.json', 'en_geo_2020-04-19-043.json', 'en_geo_2020-03-02.json', 'en_geo_2020-02-17.json', 'en_geo_2020-03-18.json', 'en_geo_2020-03-17-034.json', 'en_geo_2020-02-07.json', 'en_geo_2020-04-25.json', 'en_geo_2020-03-26-049.json', 'en_geo_2020-04-16-039.json', 'en_geo_2020-02-10.json', 'en_geo_2020-04-04.json', 'en_geo_2020-02-18.json', 'en_geo_2020-02-02.json', 'en_geo_2020-02-25.json', 'en_geo_2020-04-24-053.json', 'en_geo_2020-03-28-025.json', 'en_geo_2020-03-24.json', 'en_geo_2020-04-06-036.json', 'en_geo_2020-03-23-023.json', 'en_geo_2020-03-15.json', 'en_geo_2020-02-04.json', 'en_geo_2020-03-08.json', 'en_geo_2020-03-22.json', 'en_geo_2020-02-26.json', 'sample.json', 'en_geo_2020-04-21-050.json', 'en_geo_2020-03-20.json', 'en_geo_2020-03-05.json', 'en_geo_2020-03-13-024.json', 'en_geo_2020-02-13.json', 'en_geo_2020-03-19.json', 'en_geo_2020-02-27.json', 'en_geo_2020-04-15-055.json', 'en_geo_2020-04-20-057.json', 'en_geo_2020-04-29.json', 'en_geo_2020-03-10.json', 'en_geo_2020-04-05-030.json', 'en_geo_2020-02-21.json', 'en_geo_2020-03-01.json', 'en_geo_2020-02-12.json', 'en_geo_2020-02-23.json', 'en_geo_2020-03-12-022.json', 'en_geo_2020-04-28.json', 'en_geo_2020-04-17-042.json', 'en_geo_2020-04-11-031.json', 'en_geo_2020-03-03.json', 'en_geo_2020-04-27.json', 'en_geo_2020-03-27-020.json', 'en_geo_2020-02-28.json', 'en_geo_2020-04-14-035.json', 'en_geo_2020-02-06.json', 'en_geo_2020-04-01-046.json', 'en_geo_2020-03-04.json', 'en_geo_2020-02-16.json', 'en_geo_2020-04-07-044.json', 'en_geo_2020-04-02-054.json', 'en_geo_2020-04-09-033.json', 'en_geo_2020-03-07.json', 'en_geo_2020-03-21.json', 'en_geo_2020-02-05.json', 'en_geo_2020-04-13-041.json', 'en_geo_2020-04-26-052.json', 'en_geo_2020-02-11.json', 'en_geo_2020-02-29.json', 'en_geo_2020-03-11.json', 'en_geo_2020-04-10-058.json', 'en_geo_2020-02-01.json', 'en_geo_2020-02-08.json', 'en_geo_2020-04-12-028.json', 'en_geo_2020-03-29-032.json', 'en_geo_2020-03-25.json', 'en_geo_2020-03-16.json', 'en_geo_2020-02-03.json', 'en_geo_2020-04-30.json', 'en_geo_2020-04-08-040.json', 'en_geo_2020-02-09.json', 'en_geo_2020-04-18-038.json', 'en_geo_2020-02-22.json', 'en_geo_2020-04-22-056.json', 'en_geo_2020-02-15.json', 'en_geo_2020-03-09.json', 'en_geo_2020-04-23-048.json', 'en_geo_2020-03-30-045.json', 'en_geo_2020-02-14.json', 'en_geo_2020-02-19.json', 'en_geo_2020-03-14.json', 'en_geo_2020-02-24.json']
   all_files_without_feb = [f for f in all_files if f.find("en_geo_2020-02") == -1]
   all_files_without_feb.sort()
+
+  # Running for 03-06
+  all_files_without_feb = ["split_1.json", "split_2.json", "split_3.json", "split_4.json", "split_5.json", "split_6.json", "split_7.json", "split_8.json", "split_9.json", "split_10.json", "split_11.json", "split_12.json", "split_13.json"]
   json_file = all_files_without_feb[int(sys.argv[2])-1]
 
   print("Started")

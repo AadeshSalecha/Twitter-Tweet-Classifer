@@ -2,7 +2,7 @@ import pandas as pd
 import ast
 
 def convert_line_to_dict(line): 
-  return ast.literal_eval(line)
+  return ast.literal_eval(line.lstrip().rstrip())
 
   # d = {}
   # id_str = "\'ID\': "
