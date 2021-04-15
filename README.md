@@ -8,3 +8,7 @@ Files for COVID Project's Twitter classification phase
 - count_lines.py: This file is used during data collection to keep a tab of how much data has been collected
 
 - read.py: Thie file has example code on how to read the dictionaries from the json output files
+
+- multi_terminal.py: Automates data collection 
+
+- analysis.py: Geolocation generation
